@@ -1,0 +1,29 @@
+body {
+  font-family: Helvetica, "Helvetica Neue",
+    sans-serif;
+  padding: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  grid-row: auto / span 3;
+  border: 1px solid rgb(0,48,90);
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+header, footer {
+  background-color: rgb(0,48,90);
+  color: #fff;
+  padding: 10px;
+}
+
+.content {
+  padding: 10px;
+}

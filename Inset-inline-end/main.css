@@ -1,0 +1,58 @@
+:root {
+  --inset-end: 150px;
+}
+
+body {
+  padding: 1.5rem;
+}
+
+.wrapper {
+  background: #100e17;
+  border-radius: 8px;
+  height: 250px;
+  padding: 15px 0;
+  position: relative;
+  width: 100%;
+}
+
+.box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  left: 15px;
+  width: 100px;
+}
+.box--inset {
+  background: #f8a100;
+  inset-inline-start: var(--inset-end);
+  position: relative;
+  writing-mode: horiztonal-lr;
+}
+.box--original {
+  background: transparent;
+  border: 1px dashed #f8a100;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  bottom: 0;
+}
+
+.notice {
+  background: #fff9c4;
+  border-radius: 8px;
+  color: #827717;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@supports (inset-block-start: 0) {
+  .controls {
+    display: grid;
+  }
+
+  .notice {
+    display: none;
+  }
+}

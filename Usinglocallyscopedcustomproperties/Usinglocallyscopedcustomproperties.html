@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="introduction">
+  <h1 class="title">Using locally scoped custom properties</h1>
+  <p>By using locally scopped properties, we can easily style individual components. The title here has a class of <code>.title</code>, as do the <code>h2</code> for each of the following sections.</p>
+  <p>Because I'm using locally scoped properties to style them, I don't even need to select them, I only have to select the parent and change the value of the property.</p>
+  <p>There is no need to define them in the global scope, as they aren't global properties. For example, the <code>--button-scale</code> has no need to be defined globally, as it's only used within my buttons.</p>
+  <p>Working like this can help keep things nice and organized, yet very easy to make changes without getting into specificity wars or the need to go wild with extra classes to make minor modifications.</p>
+</div>
+
+<div class="cta">
+  <h2 class="title">Join our awesome newsletter!</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam consequuntur repellat vero pariatur ipsum ut.</p>
+  <ul class="icon-list">
+    <li>Weekly content</li>
+    <li>Special deals</li>
+    <li>Super awesome stuff</li>
+  </ul>
+  <button class="button">Join now</button>
+</div>
+
+<div class="plans">
+  <h2 class="title">Our plans</h2>
+  <div class="pricing pricing-basic">
+    <h2 class="category">Basic</h2>
+    <p class="price">$99</p>
+    <ul class="icon-list">
+      <li>ipsum dolor</li>
+      <li>voluptas ipsum</li>
+      <li>earum assumenda</li>
+      <li>eius delectus</li>
+    </ul>
+    <button class="button">Purchase</button>
+  </div>
+  <div class="pricing pricing-dark">
+    <h2 class="category">Intermediate</h2>
+    <p class="price">$199</p>
+    <ul class="icon-list">
+      <li>ipsum dolor</li>
+      <li>voluptas ipsum</li>
+      <li>earum assumenda</li>
+      <li>eius delectus</li>
+    </ul>
+    <button class="button">Purchase</button>
+  </div>
+  <div class="pricing pricing-accent">
+    <h2 class="category">Pro</h2>
+    <p class="price">$299</p>
+    <ul class="icon-list">
+      <li>ipsum dolor</li>
+      <li>voluptas ipsum</li>
+      <li>earum assumenda</li>
+      <li>eius delectus</li>
+    </ul>
+    <button class="button">Purchase</button>
+  </div>
+  <div class="pricing pricing-rainbow">
+    <h2 class="category">Rainbow</h2>
+    <p class="price">$999</p>
+    <ul class="icon-list">
+      <li>ipsum dolor</li>
+      <li>voluptas ipsum</li>
+      <li>earum assumenda</li>
+      <li>eius delectus</li>
+    </ul>
+    <button class="button">Purchase</button>
+  </div>
+</div>
+
+<footer>
+  <h2 class="title">the end</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto tempore minima facere et, totam nesciunt?</p>
+</footer>
+
+
+</body>
+</html>

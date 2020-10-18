@@ -1,0 +1,120 @@
+/* themed properties
+---------------------------------------------------- */
+
+:root {
+  --theme-contrast: #ffffff;
+  --theme-primary: #b30027;
+  --theme-font-size: 125%;
+  --unsupported-message-display: none;
+}
+
+
+/* themed elements
+---------------------------------------------------- */
+
+.template {
+  font-size: var(--theme-font-size);
+}
+
+
+.primary--text {
+  color: var(--theme-primary);
+}
+.primary--fill {
+  background-color: var(--theme-primary);
+}
+
+
+.contrast--text {
+  color: var(--theme-contrast);
+}
+.contrast--fill {
+  background-color: var(--theme-contrast);
+}
+
+
+/* demo styles 
+---------------------------------------------------- */
+
+body {
+  font: 100% / 1.5 Arial;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 3em 0;
+}
+
+.masthead {
+  padding: 12% 2em;
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3))
+}
+
+.body {
+  margin: auto;
+  max-width: 760px;
+  padding: 2em;
+}
+
+/* Button styles
+---------------------------------------------------- */
+.button {
+  margin: 0;
+  padding: .5em 2em;
+  border-radius: .25em;
+  text-decoration: none;
+  box-shadow: 0 .1em .2em 0em rgba(0,0,0,0.5);
+  border-bottom: .15em solid rgba(0,0,0,0.25);
+}
+
+.button:hover {
+  background-image: linear-gradient(
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.3)
+  );
+}
+
+
+/* Toolbox styles
+---------------------------------------------------- */
+.tools {
+  position: fixed;
+  background: rgba(225,225,225,.75);
+  padding: 1em;
+  margin: .5em;
+  border-radius: .25em;
+  max-width: 20em;
+}
+
+.tools > * {
+  display: inline-block;
+}
+
+.tools label {
+  min-width: 9em;
+  max-width: 11em;
+}
+
+
+/* Show a message in unsupported browsers
+---------------------------------------------------- */
+:root::before {
+  font: 100%/1.5 Menlo, monospace;
+  content: 'NOTE: This browser doesn\'t support CSS Custom Properties';
+  text-align: center;
+  background: #fc0;
+  padding: 1em;
+  border-radius: 1em;
+  position: fixed;
+  left: 50%;
+  bottom: 0.5em;
+  transform: translate(-50%,-50%);
+}
+
+@supports (font-size: var(--theme-font-size)) {
+  :root::before {
+    display: none;
+  }
+}
