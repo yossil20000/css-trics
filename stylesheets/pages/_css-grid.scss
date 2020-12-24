@@ -1,0 +1,76 @@
+[class ^="box-"]
+{
+    display: grid;
+    place-items: center;
+    border: 3px solid red;
+}
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "a1 a1 a1 a1  a1 a1 a1 a1  a1 a1 a1 a1" 
+    "c3 c3 b2 b2  b2 b2 b2 b2  b2 b2 e5 e5" 
+    "c3 c3 d4 d4  d4 d4 d4 d4  d4 d4 e5 e5" 
+    "c3 c3 d4 d4  d4 d4 d4 d4  d4 d4 e5 e5" 
+    "c3 c3 d4 d4  d4 d4 d4 d4  d4 d4 e5 e5" 
+    "f6 f6 f6 f6  f6 f6 f6 f6  f6 f6 f6 f6"
+    ;
+    grid-gap: 10px;
+}
+@include media-query(tablet) {
+    .grid-container {
+        display: grid;
+        height: 100vh;
+        grid-template-areas:
+            "a1 a1 a1 a1  a1 a1 a1 a1  a1 a1 a1 a1"
+            "b2 b2 b2 b2  b2 b2 b2 b2  b2 b2 b2 b2"
+            "c3 c3 d4 d4  d4 d4 d4 d4  d4 d4 d4 d4"
+            "c3 c3 d4 d4  d4 d4 d4 d4  d4 d4 d4 d4"
+            "c3 c3 d4 d4  d4 d4 d4 d4  d4 d4 d4 d4"
+            "e5 e5 f6 f6  f6 f6 f6 f6  f6 f6 f6 f6"
+        ;
+    }
+}
+
+@include media-query(mobile) {
+    .grid-container {
+        display: grid;
+        height: 100vh;
+        grid-template-areas:
+            "a1 a1 a1 a1  a1 a1 a1 a1  a1 a1 a1 a1"
+            "b2 b2 b2 b2  b2 b2 b2 b2  b2 b2 b2 b2"
+            "d4 d4 d4 d4  d4 d4 d4 d4  d4 d4 d4 d4" 
+            "d4 d4 d4 d4  d4 d4 d4 d4  d4 d4 d4 d4" 
+            "d4 d4 d4 d4  d4 d4 d4 d4  d4 d4 d4 d4" 
+            "c3 c3 c3 c3  c3 c3 c3 c3  c3 c3 c3 c3"
+            "e5 e5 e5 e5  e5 e5 e5 e5  e5 e5 e5 e5"
+            "f6 f6 f6 f6  f6 f6 f6 f6  f6 f6 f6 f6"
+        ;
+    }
+}
+.box-1{
+    grid-area: a1;
+
+}
+.box-2 {
+    grid-area: b2;
+
+}
+.box-3 {
+    grid-area: c3;
+
+}
+.box-4 {
+    grid-area: d4;
+
+}
+.box-5 {
+    grid-area: e5;
+
+}
+.box-6 {
+    grid-area: f6;
+
+}
+
